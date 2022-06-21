@@ -30,7 +30,7 @@ if(isset($_POST['updateBanner'])){
     if(empty($title) || empty($sub_title) || empty($details)){
         echo "All feild are required";
     }else{
-        $updateQry = "UPDATE banner SET title='{$title}', sub_title='{$sub_title}', details='{$details}' WHERE id='{$banner_id}'";
+        $updateQry = "UPDATE banners SET title='{$title}', sub_title='{$sub_title}', details='{$details}' WHERE id='{$banner_id}'";
         $isSubmit = mysqli_query($dbCon,$updateQry);
         if($isSubmit == true){
             $message = "Banner insert successfully";
