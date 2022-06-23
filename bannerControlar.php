@@ -28,7 +28,7 @@ if(isset($_POST['updateBanner'])){
     $details = $_POST['details'];
 
     if(empty($title) || empty($sub_title) || empty($details)){
-        echo "All feild are required";
+        $message = "All feild are required";
     }else{
         $updateQry = "UPDATE banners SET title='{$title}', sub_title='{$sub_title}', details='{$details}' WHERE id='{$banner_id}'";
         $isSubmit = mysqli_query($dbCon,$updateQry);
@@ -38,7 +38,7 @@ if(isset($_POST['updateBanner'])){
             $message = "feild";
         }
 
-        header("location: bannerCreate.php?msg={$message}");
+        header("location: bannerUpdate.php?banner_id={$banner_id}&msg={$message}");
     }
 }
 ?>
