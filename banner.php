@@ -88,6 +88,15 @@
 		                	</div>
 						</div>
 						<div class="panel-body">
+						<?php
+								if (isset($_GET['msg'])) {
+							?>
+								<div class="alert alert-success no-border">
+									<button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+									<span class="text-semibold">Success</span> <?php echo $_GET['msg']; ?>
+								</div>
+							<?php } ?>
+
 						<table class="table datatable-basic table-bordered">
 							<thead>
 								<tr>

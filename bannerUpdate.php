@@ -90,7 +90,7 @@
 						<?php
 						require "db_config.php";
 						$banner_id = $_GET['banner_id'];
-						$getSingleDataQry = "SELECT * FROM banners WHERE id={banner_id}";
+						$getSingleDataQry = "SELECT * FROM banners WHERE id={$banner_id}";
 						$getResult = mysqli_query($dbCon,$getSingleDataQry);
 						?>
 					<form class="form-horizontal" action="bannerControlar.php" method = "post">
@@ -120,13 +120,14 @@
 											<input type="text" class="form-control" id="title" name="title" value="<?php echo $banner['title']; ?>">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-lg-2" for ="sub_title" >Sub Title</label>
+										<label class="control-label col-lg-2" for = "sub_title">Sub  Title</label>
 										<div class="col-lg-10">
-											<input type="text" class="form-control" name="sub_title" id="sub_title" value="<?php echo $banner['sub_tile']; ?>>
+											<input type="text" class="form-control" id="sub_title" name="sub_title" value="<?php echo $banner['sub_title']; ?>">
 										</div>
 									</div>
+
+									
 
 									<div class="form-group">
 										<label class="control-label col-lg-2" for="details">Details</label>

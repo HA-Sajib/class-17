@@ -38,7 +38,7 @@ if(isset($_POST['updateBanner'])){
             $message = "feild";
         }
 
-        header("location: bannerUpdate.php?banner_id={$banner_id}&msg={$message}");
+        header("location:bannerUpdate.php?banner_id={$banner_id}&msg={$message}");
     }
 }
 ?>
